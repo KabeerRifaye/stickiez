@@ -1,5 +1,5 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var App = require('./components/app');
+var Todo = require('./components/app');
 
-ReactDOM.render(<App />, document.getElementById('stickiez-note'));
+ReactDOM.render(<Todo count={10} />, document.getElementById('stickiez-note'));

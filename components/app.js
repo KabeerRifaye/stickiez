@@ -1,5 +1,8 @@
 // require 'react' module
 var React = require('react');
+var ReactDOM = require('react-dom');
+var $ = require('jquery'); // load jquery
+require('jquery-ui'); // load all jquery-ui modules
 
 // Child Component
 var Note = React.createClass({
@@ -16,7 +19,7 @@ var Note = React.createClass({
 		};
 	},
 	componentDidMount: function(){
-		$(this.getDOMNode()).draggable().addClass('animated');
+		$(ReactDOM.findDOMNode(this)).draggable().addClass('animated');
 	},
 	// Generate random number for positioning
 	randomBetween: function(min, max){
@@ -28,7 +31,7 @@ var Note = React.createClass({
 	},
 	// Save Note
 	save: function(){
-		this.props.onChange(this.refs.newText.getDOMNode().value, this.props.index);
+		this.props.onChange(ReactDOM.findDOMNode(this.refs.newText).value, this.props.index);
 		this.setState({editing: false});
 	},
 	// Remove/Delete Note 

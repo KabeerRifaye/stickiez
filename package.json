@@ -21,6 +21,8 @@
     "bootstrap": "^3.3.6",
     "express": "^4.13.4",
     "express-react-views": "^0.10.0",
+    "jquery": "^2.2.2",
+    "jquery-ui": "^1.10.5",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "webpack": "^1.12.14"
