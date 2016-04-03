@@ -1,9 +1,14 @@
+// Module Dependencies
 var express = require('express'),
 	app = express();
 
 app.use(express.static('./public'));
 app.use(express.static('./node_modules/bootstrap/dist'));
 
-app.listen(4000, function(){
-	console.log("Listening on port : 4000 ");
+// Assign port address
+var port = process.env.PORT || 4000;
+
+// Create Server
+app.listen(port, function(){
+	console.log("Listening on port : ",port);
 });
